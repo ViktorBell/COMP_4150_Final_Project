@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,10 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'threeD_model_database_interface_app'
+    'rest_framework.authtoken',
+    'django_filters',
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
+    'allauth',
+    'allauth.account',
+    'corsheaders',
+    #'threeD_model_database_interface_app'
 ]
 
 MIDDLEWARE = [
@@ -49,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'Fiction2Form_BackEnd.urls'
@@ -70,6 +81,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Fiction2Form_BackEnd.wsgi.application'
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+
+}
 
 
 # Database
@@ -124,9 +140,74 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Allows for more control of CORS communication by specifying domains that are allowed to communicate with each other
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+#     "http://127.0.0.1:3000"
+# ]
+
+# Quick hack to allow communication between all origins
+CORS_ALLOW_ALL_ORIGINS = True
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
+
+# Authentication Setup and configuration
+AUTHENTICATION_BACKENDS = (
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+
+# URL settings
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+
+
+# django-allauth settings for account authentication using email
+SITE_ID = 1
+
+# Specifies the login method to use – whether the user logs in by entering their username, e-mail address, or either one of both.
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
+# Indicates whether or not an e-mail address is automatically confirmed by a GET request.
+ACCOUNT_CONFIRM_EMAIL_ON_GET = False
+
+# The URL to redirect to after a successful e-mail confirmation, in case no user is logged in.
+ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = LOGIN_URL
+
+# The URL to redirect to after a successful e-mail confirmation, in case of an authenticated user.
+ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = None
+
+# Determines the e-mail verification method during signup.
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+# Defines the name of the table to create for storing email addresses.
+ACCOUNT_EMAIL_MODEL = 'account.EmailAddress'
+
+# Determines whether or not there is a 1:1 relation between email addresses and user accounts.
+ACCOUNT_UNIQUE_EMAIL = True
+
+# The user is required to hand over an e-mail address when signing up.
+ACCOUNT_EMAIL_REQUIRED = True
+
+# The user is required to enter a username when signing up.
+ACCOUNT_USERNAME_REQUIRED = False
+
+# Indicates whether account e-mails and usernames are case-sensitive.
+ACCOUNT_EMAIL_CONFIRMATION_CASE_SENSITIVE = True
+ACCOUNT_EMAIL_SUBJECT_PREFIX = '[Site]'
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'http'
+
+# The URL or named URL pattern to use when directing a user to the password reset page.
+ACCOUNT_PASSWORD_RESET_REDIRECT_URL = 'account_change_password'
+
+# Determines whether or not an account is automatically logged in after a password reset.
+ACCOUNT_PASSWORD_RESET_LOGIN = True
