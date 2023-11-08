@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
     'allauth',
     'allauth.account',
-    'corsheaders',
+    'corsheaders',git
     #'threeD_model_database_interface_app'
 ]
 
