@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
 }
 
 .App-link {
@@ -39,3 +40,61 @@
 
 /* added */
 
+ul{
+  display:block;
+  width:100%;
+  /*height:inherit;*/
+}
+ul{
+  list-style-type:none;
+}
+li:nth-child(1)
+{
+  position:absolute;
+  left:10%;
+  height:20px;
+  width:20px;
+  background:rgba(28, 72, 79, 0.5);
+  animation:animate-1 13s linear 1s infinite;
+}
+li:nth-child(2)
+{
+  position:absolute;
+  left:30%;
+  height:20px;
+  width:20px;
+  background:rgba(28, 72, 79, 0.5);
+  animation:animate-1 18s linear 1s infinite;
+}
+li:nth-child(3)
+{
+  position:absolute;
+  left:75%;
+  height:20px;
+  width:20px;
+  background:rgba(28, 72, 79, 0.5);
+  animation:animate-1 10s linear 1s infinite;
+}
+li:nth-child(4)
+{
+  position:absolute;
+  left:90%;
+  height:20px;
+  width:20px;
+  background:rgba(28, 72, 79, 0.5);
+  animation:animate-1 7s linear 1s infinite;
+}
+/*li{
+  animation:animate 15s linear 1s infinite;
+}*/
+
+@keyframes animate-1{
+  from{
+    transform: translateY(+3405%) rotate(180deg)
+  }
+  to{
+    transform: translateY(-100%)
+    rotate(360deg);
+    background:rgba(44, 189, 222, 0);
+  }
+}

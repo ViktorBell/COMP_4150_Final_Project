@@ -11,7 +11,15 @@ const App: React.FC = () => {
           <h1>Fiction 2 Form</h1>
         </header>
         <main>
-          <Register />
+            <Register />
+            <div className="animated-boxes">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
         </main>
       </div>
   );
