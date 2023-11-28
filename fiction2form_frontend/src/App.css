@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Kay+Pho+Du&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Kay+Pho+Du', sans-serif;
 }
 
 .App-logo {

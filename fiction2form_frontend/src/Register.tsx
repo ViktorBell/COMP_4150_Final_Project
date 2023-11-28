@@ -54,7 +54,7 @@ const Register: React.FC = () => {
                     <label>Confirm Password</label>
                 </div>
                 <div className="register-button">
-                    <button type="button">Register</button>
+                    <button type="submit" className="register-button-button">Register</button>
                 </div>
             </form>
         </div>
