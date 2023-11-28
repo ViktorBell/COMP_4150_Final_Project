@@ -101,3 +101,22 @@ li:nth-child(4)
     background:rgba(44, 189, 222, 0);
   }
 }
+
+.App .login-button button {
+  width: 10%;
+  /*background: dodgerblue;*/
+  background:#118296 ;
+  color: white;
+  border: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.App .login-button-button:hover, .login-button-button:link:hover, .login-button-button:visited:hover {
+  width: 10%;
+  background: #07B5E0EE;
+  color: black;
+  border: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}

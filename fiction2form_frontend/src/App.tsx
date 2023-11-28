@@ -36,7 +36,9 @@ const App: React.FC = () => {
                     <li></li>
                 </ul>
             </div>
-            <Link to={"/Login"}>Login</Link>
+            <div className={"login-button"}>
+                <button className={"login-button-button"}><Link to={"/Login"}>Login</Link></button>
+            </div>
         </main>
           <Routes>
               <Route path="/Login" element={<Login/>}></Route>
