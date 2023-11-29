@@ -1,3 +1,19 @@
+.search-bar {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    border: white;
+}
+
+.search-bar input {
+    width: 400px;
+    height: 30px;
+    font-size: 30px;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -20,6 +36,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
 }
 .flex-item2 {
     /*flex-grow: 1;*/
@@ -35,6 +54,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .flex-item3 {
@@ -51,6 +73,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .flex-item4 {
@@ -67,6 +92,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .flex-item5 {
@@ -83,6 +111,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
 }
 /*
 .flex-item2 {
