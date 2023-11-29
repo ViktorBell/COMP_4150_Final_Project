@@ -14,7 +14,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-cdfrom django.urls import path, include
+from django.contrib import admin
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 #from threeD_model_database_interface_app import views
@@ -24,6 +25,7 @@ urlpatterns = [
     # path('', views.model_list, name='model_list'),
     # path('<int:model_id>/', views.model_detail, name='model_detail'),
     # path('upload/', views.model_upload, name='model_upload'),
+    path('', include('DBtest.urls')),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
 

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'corsheaders',
+    'DBtest',
     #'threeD_model_database_interface_app'
 ]
 
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+     "allauth.account.middleware.AccountMiddleware",
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -96,10 +98,10 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'fiction2form_modeldatabase',
-        'USER': 'admin_databaseuser',
+        'NAME': 'testdb',
+        'USER': 'postgres',
         'PASSWORD': 'Superbase18',
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 
