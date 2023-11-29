@@ -4,6 +4,7 @@ import React from 'react';
 import './App.css';
 import Register from './Register';
 import Login from './Login';
+import ProductPage from './ProductPage';
 
 import {
     BrowserRouter as Router,
@@ -21,13 +22,13 @@ import {
 
 const App: React.FC = () => {
   return (
-      <Router>
+
       <div className="App">
         <header className="App-header">
           <h1>Fiction 2 Form</h1>
+            <p>3D Models - Customizations - Shipped to You</p>
         </header>
         <main>
-            <Register/>
             <div className="animated-boxes">
                 <ul>
                     <li></li>
@@ -37,15 +38,19 @@ const App: React.FC = () => {
                 </ul>
             </div>
             <div className={"login-button"}>
-                <button className={"login-button-button"}><Link to={"/Login"}>Login</Link></button>
+                <Link to={"/Login"}><button className="login-button-button">Login</button></Link>
+                <Link to={"/ProductPage"}><button className="login-button-button">Products</button></Link>
+                <Link to={"/Register"}><button className="login-button-button">Register</button></Link>
             </div>
         </main>
           <Routes>
-              <Route path="/Login" element={<Login/>}></Route>
+              <Route path="/Login" element={<Login/>} ></Route>
+              <Route path={"/ProductPage"} element={<ProductPage/>}></Route>
+              <Route path="/Register" element={<Register/>}></Route>
           </Routes>
-          <p>Already have an account? <a href={"./Login.tsx"}>Login! </a></p>
       </div>
-      </Router>
+
+
   );
 }
 
