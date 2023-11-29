@@ -27,6 +27,7 @@ urlpatterns = [
     # path('upload/', views.model_upload, name='model_upload'),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
+    path('', include('users_app.urls')),
 
     # Add paths for update and delete views here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
