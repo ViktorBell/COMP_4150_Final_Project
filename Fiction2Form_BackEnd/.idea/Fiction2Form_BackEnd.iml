@@ -18,7 +18,7 @@
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/COMP4150_Backend_venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.11 (Fiction2Form_BackEnd)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12 (Fiction2Form_BackEnd)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

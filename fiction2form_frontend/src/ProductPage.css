@@ -1,0 +1,128 @@
+.search-bar {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    border: white;
+}
+
+.search-bar input {
+    width: 400px;
+    height: 30px;
+    font-size: 30px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.flex-item1 {
+    /*flex-grow: 1;*/
+    /*column-gap: 10px;*/
+    width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 4px;
+    /*justify-content: space-around;*/
+    /*background-color: whitesmoke;*/
+    background-image: url("../public/fox.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.flex-item2 {
+    /*flex-grow: 1;*/
+    /*column-gap: 10px;*/
+    width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 4px;
+    /*justify-content: space-around;*/
+    /*background-color: whitesmoke;*/
+    background-image: url("../public/shapes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.flex-item3 {
+    /*flex-grow: 1;*/
+    /*column-gap: 10px;*/
+    width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 4px;
+    /*justify-content: space-around;*/
+    /*background-color: whitesmoke;*/
+    background-image: url("../public/car.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.flex-item4 {
+    /*flex-grow: 1;*/
+    /*column-gap: 10px;*/
+    width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 4px;
+    /*justify-content: space-around;*/
+    /*background-color: whitesmoke;*/
+    background-image: url("../public/robots.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.flex-item5 {
+    /*flex-grow: 1;*/
+    /*column-gap: 10px;*/
+    width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 4px;
+    /*justify-content: space-around;*/
+    /*background-color: whitesmoke;*/
+    background-image: url("../public/house.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+/*
+.flex-item2 {
+    /*flex-grow: 2;
+    column-gap: 10px;
+    /*width: 400px;
+    box-sizing: border-box;
+    /*box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 2px;
+    /*justify-content: space-around;
+    background-color: whitesmoke;
+}*/

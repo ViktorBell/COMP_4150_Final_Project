@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "babylonjs": "^6.14.0"
+    "babylonjs": "^6.27.0",
+    "packages.json": "^0.0.1-security"
   }
 }
